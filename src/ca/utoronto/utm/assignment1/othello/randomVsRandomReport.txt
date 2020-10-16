@@ -1,0 +1,118 @@
+RandomVSRandom Report
+
+1) What is your conclusion, does the first or
+second player have some advantage, at least for a random strategy? 
+
+After running OthelloControllerRandomVSRandom several times, there has been a consistent
+trend of the second player having a higher winrate than the first player when choosing
+random moves.
+
+2) Watch https://www.youtube.com/watch?v=Iq9DzN6mvYA
+
+3) Briefly write your thoughts on the above video below:
+
+I think having several way to explain a harder, unintuitive concept to understand such as 
+statistics through writing intuitive code is helpful, especially now that most students in 
+CSC207 are also in STA256. I found the Direct Simulation and Shuffling methods specifically 
+appealing to me, as I find computational approaches more intuitive than statistical rules.
+I also liked the way the speaker emphasized the importance of keeping the question to be solved
+in mind for "hacking" statistics. I think this is important in all fields, not just statistics.
+
+4) H0 is that the discrepancy between the winrates of the first or second player is due to 
+sampling/experimental errors, it should be an equal probability of winning for each player.
+
+5) Ha is that the discrepancy between the winrates of the first or second player is significant,
+the second player has an advantage to winning over the first player.
+
+6) Choose one of the following and delete the other:
+   My experimental results do not support H0, so they support Ha
+
+7) As in the video, use either math or code (add a Java Class) to argue for or against H0
+Please see the RandomVSRandomShuffling class and its main method output. This is one of the possible outputs:
+
+Trial 0
+Probability P1 wins=0.4603
+Probability P2 wins=0.4986
+
+Trial 1
+Probability P1 wins=0.4464
+Probability P2 wins=0.5097
+
+Trial 2
+Probability P1 wins=0.453
+Probability P2 wins=0.502
+
+Trial 3
+Probability P1 wins=0.4569
+Probability P2 wins=0.503
+
+Trial 4
+Probability P1 wins=0.4587
+Probability P2 wins=0.4996
+
+Trial 5
+Probability P1 wins=0.4585
+Probability P2 wins=0.5021
+
+Mean before shuffling:
+Mean P1 wins=0.4556333
+Mean P2 wins=0.5025
+Difference in means=0.046866685
+
+Mean after shuffling:
+Mean P1 wins=0.47058332
+Mean P2 wins=0.48755
+Difference in means=0.01696667
+
+Mean after shuffling:
+Mean P1 wins=0.48885
+Mean P2 wins=0.46928334
+Difference in means=-0.019566655
+
+Mean after shuffling:
+Mean P1 wins=0.48513332
+Mean P2 wins=0.47300002
+Difference in means=-0.0121333
+
+Mean after shuffling:
+Mean P1 wins=0.46928334
+Mean P2 wins=0.48885
+Difference in means=0.019566655
+
+Mean after shuffling:
+Mean P1 wins=0.47058332
+Mean P2 wins=0.48755
+Difference in means=0.01696667
+
+Mean after shuffling:
+Mean P1 wins=0.488
+Mean P2 wins=0.4701333
+Difference in means=-0.0178667
+
+Mean after shuffling:
+Mean P1 wins=0.46971667
+Mean P2 wins=0.48841664
+Difference in means=0.018699974
+
+Mean after shuffling:
+Mean P1 wins=0.4893
+Mean P2 wins=0.46883333
+Difference in means=-0.020466685
+
+Mean after shuffling:
+Mean P1 wins=0.48843333
+Mean P2 wins=0.46969998
+Difference in means=-0.018733352
+
+Mean after shuffling:
+Mean P1 wins=0.47386667
+Mean P2 wins=0.48426667
+Difference in means=0.010399997
+
+We can then plot a graph with the data to see where our measured data lies. Even without doing so,
+we can see that our measured data (difference between means before shuffling) lies far beyond 
+the other differences between means after shuffling. We can repeat these trials several times, 
+but it is quite evident that the trials argue against the null hypothesis.
+
+References: 
+https://www.thoughtco.com/null-hypothesis-vs-alternative-hypothesis-3126413
